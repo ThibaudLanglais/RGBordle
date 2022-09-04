@@ -5,7 +5,7 @@ import party from "party-js";
 import moment from "moment/moment";
 import HelpModal from "./components/HelpModal";
 
-const maxTries = 6;
+const maxTries = 8;
 
 export default function App() {
 
@@ -51,11 +51,11 @@ export default function App() {
       localStorage.setItem('color', JSON.stringify(newColor));
       localStorage.setItem('guesses', JSON.stringify([]));
       localStorage.setItem('hasWon', false);
-      setRed(null);
-      setGreen(null);
-      setBlue(null);
       setColor(newColor);
       setGuesses([]);
+      setRed('');
+      setGreen('');
+      setBlue('');
       setHasWon(null);
     }
   }
