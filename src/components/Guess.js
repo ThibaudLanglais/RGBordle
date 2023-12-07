@@ -32,7 +32,7 @@ function Guess({guess, color}) {
    return (
       <div className='flex gap-1 flex-row'>
          <div className='h-6 rounded w-6' style={{background: `rgb(${guess.red ?? 0}, ${guess.green ?? 0}, ${guess.blue ?? 0})`}}></div>
-         <div className='h-6 rounded flex-1 flex flex-row gap-5'>
+         <div className='h-6 rounded flex-1 flex flex-row gap-1'>
             <div className="h-full w-full flex flex-row justify-around rounded" style={{background: getRed()}}>
                <p className='text-white'>{guess.red ?? 0} {getProximityText(guess.red ?? 0, color.red)}</p>
             </div>
