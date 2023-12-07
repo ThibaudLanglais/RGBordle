@@ -27,7 +27,7 @@ export default function App() {
   }, [])
 
   function init(reset){
-    const newColor = {red: Math.ceil(Math.random() * 256), green: Math.ceil(Math.random() * 256), blue: Math.ceil(Math.random() * 256)};
+    const newColor = {red: Math.floor(Math.random() * 256), green: Math.floor(Math.random() * 256), blue: Math.floor(Math.random() * 256)};
     const lastGameAt = localStorage.getItem('lastGameAt');
     const fromStorage = localStorage.getItem('color');
     const guessesFromStorage = localStorage.getItem('guesses');
