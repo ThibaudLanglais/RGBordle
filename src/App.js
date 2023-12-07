@@ -113,7 +113,7 @@ export default function App() {
           </p>
         }
         <form onSubmit={handleSubmit} className="flex flex-1 flex-row gap-2 mt-4 flex-wrap">
-          <div className="flex flex-col w-full !sm:grid grid-cols-3 gap-2">
+          <div className="flex flex-row w-full !sm:grid grid-cols-3 gap-2">
           <input step={1} value={red} onChange={({target}) => setRed(formatValue(target.value))} required className="shadow h-10 p-2 rounded w-full text-red" placeholder="red" type="number" min={0} max={255}/>
           <input step={1} value={green} onChange={({target}) => setGreen(formatValue(target.value))} required className="shadow h-10 p-2 rounded w-full text-green" placeholder="green" type="number" min={0} max={255}/>
           <input step={1} value={blue} onChange={({target}) => setBlue(formatValue(target.value))} required className="shadow h-10 p-2 rounded w-full text-blue" placeholder="blue" type="number" min={0} max={255}/>
