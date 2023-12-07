@@ -113,9 +113,11 @@ export default function App() {
           </p>
         }
         <form onSubmit={handleSubmit} className="flex flex-1 flex-row gap-2 mt-4 flex-wrap">
+          <div className="grid grid-cols-3">
           <input step={1} value={red} onChange={({target}) => setRed(formatValue(target.value))} required className="shadow h-10 p-2 rounded flex-1 text-red" placeholder="red" type="number" min={0} max={255}/>
           <input step={1} value={green} onChange={({target}) => setGreen(formatValue(target.value))} required className="shadow h-10 p-2 rounded flex-1 text-green" placeholder="green" type="number" min={0} max={255}/>
           <input step={1} value={blue} onChange={({target}) => setBlue(formatValue(target.value))} required className="shadow h-10 p-2 rounded flex-1 text-blue" placeholder="blue" type="number" min={0} max={255}/>
+          </div>
           <button className={`${(hasWon || maxTries-guesses.length === 0) && 'hidden'} hover:translate-y-0.5 transition-transform mt-auto w-full py-4 rounded shadow text-md bg-dark text-white`} type="submit">
             Guess the color
             <span className="text-xl"> 🕵️‍♀️</span>
